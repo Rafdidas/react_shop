@@ -2,6 +2,10 @@
 /* 1. Reset
 /*-----------------------------------------------------------------*/
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -14,7 +18,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {margin:0; padding:0; border:0; outline:0; color:#333; font-family:Malgun Gothic, '맑은 고딕', AppleGothic, Dotum, '돋움', sans-serif; font-size:12px; line-height:1.6; vertical-align:baseline;}
+time, mark, audio, video {margin:0; padding:0; border:0; outline:0; color:#333; font-family:'Poppins', 'Noto Sans KR', sans-serif; font-size:12px; line-height:1.6; vertical-align:baseline;}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block;}
@@ -163,7 +167,6 @@ select:focus {border-color:#000; outline:none !important;}
 .tbl_prdinfo th {padding:10px; border:1px solid #e0e0e0; background-color:#fafafa; font-weight:normal; text-align:left; vertical-align:middle;}
 .tbl_prdinfo td {padding:10px; border:1px solid #e0e0e0; text-align:left; vertical-align:middle;}
 
-
 /*-----------------------------------------------------------------*/
 /* 2-2. button
 /*-----------------------------------------------------------------*/
@@ -231,11 +234,13 @@ select:focus {border-color:#000; outline:none !important;}
 
 #wrapper {position:relative; min-width:1100px; text-align:left;}
 #container {overflow:hidden;}
-.wrap_inner {width:1100px; margin:0 auto;} /* 컨텐츠 사이즈 */
+#cnt .cntbody {min-width:1200px; width:100%; max-width:1920px; margin:0 auto;}
+
+.wrap_inner {min-width:100px; width:100%; max-width:1200px; margin:0 auto;} /* 컨텐츠 사이즈 */
 .wrap_inner_hd {min-width:1100px; width:100%; max-width:1920px; margin:0 auto; padding:0 60px;}
 
 #header {width:100%; height:80px;}
-#header .gnb {position:relative; width:100%; height:inherit; border-bottom:1px solid red;}
+#header .gnb {position:relative; width:100%; height:inherit;}
 #header .gnb .title {padding-top:20px;}
 #header .gnb .title,
 #header .gnb .hd_menu {display:inline-block; vertical-align:top;}
@@ -243,3 +248,27 @@ select:focus {border-color:#000; outline:none !important;}
 #header .gnb .hd_menu > li {display:inline-block; padding-right:50px; vertical-align:top;}
 #header .gnb .hd_menu>li:last-child {padding-right:0;}
 #header .gnb .hd_menu > li > a {display:block; height:80px; color:#000; font-size:16px;font-weight:300; letter-spacing:0.32px; line-height:80px;}
+#header .gnb .right_menu {position:absolute; top:0; right:60px; font-size:0;}
+#header .gnb .right_menu > li {display:inline-block; margin-left:18px; vertical-align:top;}
+#header .gnb .right_menu > li > a {display:block; width:30px; height:100%; line-height:80px; text-indent:-9999px;}
+#header .gnb .right_menu > li.hd_srch > a {background:url('./bg/search_gnb_icon.png') no-repeat center;}
+#header .gnb .right_menu > li.hd_my > a {background:url('./bg/mypage_gnb_icon.png') no-repeat top 30px center;}
+#header .gnb .right_menu > li.hd_wish > a {background:url('./bg/wish_gnb_icon.png') no-repeat center;}
+#header .gnb .right_menu > li.hd_cart > a {background:url('./bg/cart_gnb_icon.png') no-repeat center;}
+
+/* main */
+#main .main_visual {width:100%; padding:0 60px; font-size:0;}
+#main .main_visual .visual_box,
+#main .main_visual .event_box {display:inline-block; vertical-align:top;}
+#main .main_visual .visual_box img,
+#main .main_visual .event_box > li img {width:100%; height:auto;}
+#main .main_visual .visual_box {width:68%; max-width:1205px; padding-right:24px;}
+#main .main_visual .event_box {width:32%; }
+#main .main_visual .event_box > li:first-child {padding-bottom:12px;}
+#main .main_visual .event_box > li:last-child {padding-top:12px;}
+#main .title_section {position:relative;}
+#main .title_section > h3 {color:#000; font-size:30px; font-weight:700;}
+#main .title_section > a {position:absolute; top:50%; right:0; margin-top:-9px; color:#000; font-size:13px; font-weight:300;}
+/* main best */
+#main .main_best {margin-top:115px; padding:108px 0 0; background:rgba(230, 220, 201, 0.35);}
+#main .prd_basic {}
